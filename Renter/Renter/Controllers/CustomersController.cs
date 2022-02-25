@@ -1,15 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 using Renter.Models;
-
 namespace Renter.Controllers
 {
     public class CustomersController : Controller
     {
-        // GET: Customers
         public ViewResult Index()
         {
             var customers = GetCustomers();
@@ -18,11 +16,12 @@ namespace Renter.Controllers
 
         public ActionResult Details(int id)
         {
+
             var customer = GetCustomers().SingleOrDefault(c => c.Id == id);
 
-            if(customer == null)
+            if (customer == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             return View(customer);
