@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Renter.Database;
 using Renter.Models;
 using Renter.ViewModels;
 using System;
@@ -11,20 +13,34 @@ namespace Renter.Controllers
 {
     public class MoviesController : Controller
     {
+        public Context _context;
+
+        public MoviesController()
+        {
+            _context = new Context();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         public ViewResult Index()
         {
-            var movies = GetMovies();
+            var movies = _context.Movies.Include(m => m.Genre);
 
             return View(movies);
         }
 
-        private IEnumerable<Movie> GetMovies()
+        public ActionResult Details(int id)
         {
-            return new List<Movie>
+            var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
+
+            if(movie == null)
             {
-                new Movie { Id = 1, Name = "Shrek"},
-                new Movie { Id = 2, Name = "Wall-e"}
-            };
+                return NotFound();
+            }
+
+            return View(movie);
         }
     }
 }
