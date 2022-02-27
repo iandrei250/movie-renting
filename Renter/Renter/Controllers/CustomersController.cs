@@ -6,6 +6,7 @@ using System.Web;
 using Renter.Models;
 using Renter.Database;
 using Microsoft.EntityFrameworkCore;
+using Renter.ViewModels;
 
 namespace Renter.Controllers
 {
@@ -39,6 +40,13 @@ namespace Renter.Controllers
             }
 
             return View(customer);
+        }
+
+       public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipType.ToList();
+            var viewModel = new NewCustomerViewModel {  MembershipTypes = membershipTypes };
+            return View(viewModel);
         }
     }
 }
