@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Renter.ViewModels
 {
-    public class NewCustomerViewModel
+    public class CustomerFormViewModel
     {
 
         public List<MembershipType> MembershipTypes { get; set; }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Kmie6o3zQDru6FZK6bEV//j8rINpFlVufQ7rkS8aKi3b3QPf2/vcAF/5yhTHQjubr0I+Ry4dOEniaz4NruMIsw==",
+  "dgSpecHash": "5WEdJbijQi28upjSLiQn2aKm0ZmYGBqfpOslSrSTIzls+/3t3vs+00heaSMs7jih5zSlpiWDztFia61sizD1vw==",
   "success": true,
   "projectFilePath": "D:\\Proiecte\\movie-renting\\Renter\\Renter\\Renter.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Andrei Iordache\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Andrei Iordache\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",
     "C:\\Users\\Andrei Iordache\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Andrei Iordache\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
