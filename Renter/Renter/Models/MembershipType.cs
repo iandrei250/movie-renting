@@ -12,5 +12,8 @@ namespace Renter.Models
         [Required]
         [MaxLength(255)]
         public string Name { get; set; }
+
+        public static readonly byte Unknown = 0;
+        public static readonly byte PayAsYouGo = 0;
     }
 }
