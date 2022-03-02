@@ -80,3 +80,6 @@ D:\Proiecte\movie-renting\Renter\Renter\bin\Debug\net5.0\Microsoft.EntityFramewo
 D:\Proiecte\movie-renting\Renter\Renter\obj\Debug\net5.0\Razor\Views\Customers\CustomerForm.cshtml.g.cs
 D:\Proiecte\movie-renting\Renter\Renter\bin\Debug\net5.0\AutoMapper.dll
 D:\Proiecte\movie-renting\Renter\Renter\obj\Debug\net5.0\Razor\Views\Movies\MovieForm.cshtml.g.cs
+D:\Proiecte\movie-renting\Renter\Renter\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+D:\Proiecte\movie-renting\Renter\Renter\bin\Debug\net5.0\System.Web.Http.dll
+D:\Proiecte\movie-renting\Renter\Renter\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

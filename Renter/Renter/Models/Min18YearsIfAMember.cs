@@ -18,7 +18,7 @@ namespace Renter.Models
                 return new ValidationResult("Birthdate is required");
             }
 
-            var customerDate = Convert.ToDateTime(customer.Birthday);
+            var customerDate = DateTime.ParseExact(customer.Birthday, "dd/MM/yyyy", null);
             var age = DateTime.Today.Year - customerDate.Year;
 
             return (age >= 18) ? ValidationResult.Success : new ValidationResult("Customer should be at least 18 years old to go on a membership");
