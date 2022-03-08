@@ -33,9 +33,10 @@ namespace Renter.Controllers.API
 
         //GET /api/customers
         [HttpGet]
-        public IEnumerable<CustomerDto> GetCustomers()
+        public ActionResult GetCustomers()
         {
-            return _context.Customers.ToList().Select(_mapper.Map<Customer, CustomerDto>);
+            var customerDtos =  _context.Customers.ToList().Select(_mapper.Map<Customer, CustomerDto>);
+            return Ok(customerDtos);
         }
 
         //GET /api/customers/{id}
